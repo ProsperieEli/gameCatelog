@@ -1,3 +1,3 @@
 /*
-
+grab from API and display all games in a list
 */

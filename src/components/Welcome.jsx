@@ -1,5 +1,7 @@
 import React from "react";
 import introText from "./IntroText";
+import {Link} from 'react-router-dom'
+
 
 export default function Welcome() {
   return (
@@ -7,7 +9,8 @@ export default function Welcome() {
       <div>
         <p>{introText}</p>
       </div>
-      <button onClick={() => console.log("closer")}>Let's get started</button>
+      <Link to="/Create Account" className="btn btn-primary">SignUp</Link>
+      <p>Or, already have an account?</p>
     </>
   );
 }

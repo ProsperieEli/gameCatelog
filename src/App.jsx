@@ -4,11 +4,16 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Welcome from "./components/Welcome";
 import CreateAccount from "./components/CreateAccount";
+import {Routes, Route, BrowserRouter } from 'react-router-dom'
 function App() {
   return (
     <>
-      {/* <Welcome /> */}
-      <CreateAccount />
+    <BrowserRouter>
+    <Routes>
+    <Route element={<Welcome />} path="/"/>
+    <Route element={<CreateAccount />} path="/Create Account"/>
+    </Routes>
+    </BrowserRouter>
     </>
   );
   /*
