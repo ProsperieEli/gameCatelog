@@ -1,15 +1,25 @@
 
 
 import express from 'express';
+import cors from 'cors'
 
 const PORT = 8080;
 
-express({
-    originWhiteList: [], //allow all orgins
-}).listen(PORT, () => {
-    console.log('CORS Anywhere server running on port ${PORT}')
-})
 
+const app = express()
+
+app.use(cors({
+    origin: '',
+}))
+
+
+
+
+// express({
+//     originWhiteList: [], //allow all orgins
+// }).listen(PORT, () => {
+    // })
+    
 // const corsAnywhere = require('cors-anywhere');
 
 // const port = 8080

@@ -1,7 +1,7 @@
 import React from "react";
 import introText from "./IntroText";
 import {Link} from 'react-router-dom'
-import getAPI from "../../Api";
+import getAPI from "../Api";
 
 export default function Welcome() {
   return (
