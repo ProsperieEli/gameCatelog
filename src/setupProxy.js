@@ -1,6 +1,6 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
-
-module.exports = function(app) {
+import express from 'express'
+import { createProxyMiddleware } from 'http-proxy-middleware'
+const app = express()
   app.use('/api', createProxyMiddleware({
     target: 'https://api.igdb.com',
     changeOrigin: true,
@@ -14,4 +14,5 @@ module.exports = function(app) {
       'Content-Type': 'application/json'
     }
   }));
-};
+  app.listen(8080);
+

@@ -5,7 +5,7 @@ export default function GetAPI()  {
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        const apiUrl = '/api';
+        const apiUrl = '/api/games';
         const axiosConfig = {
             method: 'POST',
             data: "fields name, limit 5;"
@@ -14,6 +14,7 @@ export default function GetAPI()  {
         axios.post(apiUrl, axiosConfig) 
             .then(response => {
                 setGames(response.data);
+                console.log(games)
             })
             .catch(error => {
                 console.error(error);
